@@ -1,0 +1,235 @@
+/* fonts  */
+@font-face {
+    font-family: "PTSans-bold";
+    src: url("../fonts/PTSansCaption-Bold.ttf");
+}
+
+@font-face {
+    font-family: "PTSans-regular";
+    src: url("../fonts/PTSansCaption-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Righteous";
+    src: url("../fonts/Righteous-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Pacifico";
+    src: url("../fonts/Pacifico-Regular.ttf");
+}
+
+@font-face {
+    font-family: "BreeSerif-400";
+    src: url("../fonts/BreeSerif-Regular.ttf");
+}
+/* general-start */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F7ECDE;
+}
+
+label{
+    font-family:"PTSans-bold"; 
+    font-size: 16px;
+    color: #212529    ;
+    line-height: 24px;
+}
+
+.form-control{
+    font-family: "PTSans-regular";
+    font-size: 16px;
+    color:#212529  ;
+    line-height: 24px;
+}
+
+ul{
+    list-style: none;
+}
+
+/* general-end */
+
+
+/* hero-start */
+.hero h1{
+    font-family: "Pacifico";
+    color: #352e28    ;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 500;
+    width: fit-content;
+}
+.hero h1::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 20px;
+    background-color: #FEC260;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.hero h1:hover::after{
+    height: 40px;
+    
+}
+/* hero-end */
+
+/* bookmark-data-start */
+.bookmark-data .container {
+    border-block: 2px black dotted;
+}
+
+.bookmark-data .title i{
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+}
+.bookmark-data h2{
+    font-family: "Righteous";
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bookmark-data .form-control:focus{
+    border-color: #d99c39;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+.bookmark-data .form-control.is-valid:focus{
+    border-color: #198754;
+    box-shadow: 0 0 0 .25rem rgba(25,135,84,.25);
+}
+.bookmark-data .form-control.is-invalid:focus{
+    border-color: #dc3545;
+    box-shadow: 0 0 0 .25rem rgba(220,53,69,.25);
+}
+.bookmark-data button{
+    border: #d1512d;
+    background-color: #d1512d;
+    color: white;
+    transition: all 0.5s;
+}
+
+.bookmark-data button:hover{
+    border: #a03315;
+    background-color: #bb4120;
+    color: white;
+    
+}
+/* bookmark-data-end */
+
+
+
+/* search-start */
+
+.search .form-control:focus{
+    border-color: #d99c39;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+/* search-end */
+
+
+/* bookmark-table-start */
+.bookmark-table th{
+    font-family: "PTSans-bold"; 
+    font-size: 16px;
+    line-height: 24px;
+    color: #212529    ;
+}
+
+.bookmark-table td{
+    font-family: "PTSans-regular";
+    font-size: 16px;
+    line-height: 24px;
+    color: #212529    ;
+}
+
+.bookmark-table td #visit-btn{
+    color: white;
+    background-color: #9eb23b;
+    border-color: #9eb23b;
+}
+
+.bookmark-table td #visit-btn:hover{
+    color: white;
+    background-color: #8a9e23;
+    border-color: #6e8018;
+}
+
+.bookmark-table td #delete-btn:hover{
+    color: white;
+    background-color: #d30820;
+    border-color: #ba081d;
+}
+
+
+/* bookmark-table-end */
+
+
+/* error-section-start */
+.error-section{
+    background-color: rgba(0,0,0,0.5);
+}
+.error-section .error-msg{
+    width: 550px;
+    height: 350px;
+}
+
+.error-section .circles .circle1{
+    color: #F15F5D;
+    font-size: 18px;
+}
+
+.error-section .circles .circle2{
+    color: #FEBE2E;
+    font-size: 18px;
+}
+
+.error-section .circles .circle3{
+    color: #4DB748;
+    font-size: 18px;
+}
+
+.error-section .close i{
+    color: #212529    ;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.error-section h3{
+    font-family: "BreeSerif-400";
+    font-size: 21px;
+    color: #352e28    ;
+    line-height: 27px;
+    padding-bottom: 10px;
+}
+.error-section ul{
+    padding-left: 10px;
+}
+.error-section ul li{
+    font-family: "PTSans-regular";
+    font-size: 18px;
+    line-height: 27px;
+    color: #212529    ;
+    padding-bottom: 10px;
+}
+
+.error-section ul li i{
+    color: #bb4120    ;
+    font-size: 18px;
+}
+/* error-section-end */

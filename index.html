@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+
+    <!-- fav-ico -->
+     <link rel="icon" href="./images/bookmark.png">
+
+    <!-- google-fonts  -->
+
+    <!-- font-awesome  -->
+    <link rel="stylesheet" href="css/all.min.css">
+    
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- style  -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mediaQuery.css">
+</head>
+<body>
+
+    <section class="hero py-5">
+        <h1 class="text-center position-relative mx-auto">Bookmarker</h1>
+    </section>
+
+    <section class="bookmark-data py-2 border-dotted">
+        <div class="container">
+            <div class="title text-center py-3 d-flex justify-content-center align-items-center column-gap-3">
+                <div class="icon">
+                    <i class="fa-solid fa-bookmark"></i>
+                </div>
+                <h2>Bookmark your favorite sites</h2>
+                <div class="icon">
+                    <i class="fa-solid fa-bookmark"></i>
+                </div>
+            </div>
+
+            <div class="form">
+                <div class="mb-4">
+                    <label for="bookmark-name" class="form-label"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                    <input type="text" class="form-control" id="bookmark-name" placeholder="Bookmark Name">
+                </div>
+
+                <div class="mb-4">
+                    <label for="site-url" class="form-label"><i class="fa-solid fa-link"></i> Site URL</label>
+                    <input type="text" class="form-control" id="site-url" placeholder="Website URL">
+                </div>
+
+                <div class="submit-btn text-center mb-4">
+                    <button type="button" id="submit-btn" class="btn px-5 py-2 text-center">Submit</button>
+                    <button type="button" id="edit-btn" class="btn px-5 py-2 text-center d-none ">Update</button>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <section class="search py-3">
+        <div class="container">
+            <input class="form-control" id="search-input" type="search" placeholder="Search here by website name..." aria-label="default input example">
+        </div>  
+    </section>
+
+    <section class="bookmark-table py-2">
+        <div class="container">
+            <table class="table text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">Index</th>
+                    <th scope="col">Website Name</th>
+                    <th scope="col">Visit</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="bookmarktable-body">
+                  
+                  
+                </tbody>
+              </table>
+        </div>
+
+    </section>
+ 
+    <section id="error-section" class="error-section position-fixed top-0 start-0 bottom-0 end-0 d-none justify-content-center align-items-center">
+        <div class="error-msg bg-white p-5 rounded">
+            <div class="icons d-flex flex-row justify-content-between mb-4">
+                <div class="circles">
+                    <i class="circle1 fa-solid fa-circle me-1"></i>
+                    <i class="circle2 fa-solid fa-circle me-1"></i>
+                    <i class="circle3 fa-solid fa-circle me-1"></i>
+                </div>
+                <div class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+            <h3>Site Name or Url is not valid, Please follow the rules below :</h3>
+            <ul>
+                <li><i class="fa-regular fa-circle-right"></i> Site name must contain at least 3 characters</li>
+                <li><i class="fa-regular fa-circle-right"></i> Site URL must be a valid one and start with https:// or http://</li>
+                <li><i class="fa-regular fa-circle-right"></i> Site name must be unique, and not entered before!</li>
+
+            </ul>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
